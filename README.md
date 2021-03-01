@@ -227,7 +227,7 @@ A new instance of our Python Milter is created every time an email is passed to 
 
 Please note that the email From header can only be obtained via the `header` event. The `envfrom` event can be used to get the From that is used in the SMTP session. These may or may not be the same so pay attention to it.
 
-In most cases you will have to gather all the variables you need and set them on class instance as the events fire. Then implement your custom functionality in the `eom` (end of message) event.
+In most cases you will have to gather all the variables you need and set them on the class instance as the events fire. Then implement your custom functionality in the `eom` (end of message) event.
 
 Example, the `envrcpt` event is called for all the recipients of the email, in case we see a `specialcompany.com` recipient, we set `self.mustRewriteFrom = 'true'` so we know there was a `specialcompany.com` recipient when we receive the `eom` event. `eom` is one of the last events to be triggered.
 
