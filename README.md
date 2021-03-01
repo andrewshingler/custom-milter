@@ -223,7 +223,7 @@ if __name__ == "__main__":
   main()
 ```
 
-A new instance of our Python Milter is created every time an email is passed to Postfix. So you can use class variables to keep track of things while events are triggered. The events this Python script uses are `header, envrcpt, eom`, the others are shown for reference and do some logging. Some events such as `eom` end-of-message are triggered once. Others such as `header, envrcpt` are triggered for each one of the mail headers/recipients. The order in which the events fired are similar to how an email is send over SMTP. So CONNECT... RCPT TO... headers, body etc.
+A new instance of our Python Milter is created every time an email is passed to Postfix. So you can use class variables to keep track of things while events are triggered. The events this Python script uses are `header, envrcpt, eom`, the others are shown for reference and do some logging. Some events such as `eom` end-of-message are triggered once. Others such as `header, envrcpt` are triggered for each one of the mail headers/recipients. The order in which the events trigger are similar to how an email is send over SMTP. So CONNECT... RCPT TO... headers, body etc.
 
 Please note that the email From header can only be obtained via the `header` event. The `envfrom` event can be used to get the From that is used in the SMTP session. These may or may not be the same so pay attention to it.
 
