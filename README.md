@@ -2,7 +2,7 @@
 
 This article describes how you can create an extension to Postfix. By implementing Milter (an email extension protocol) you can create an extension that receives events whenever an email is send or received. Your custom Milter extension can have event handlers for SMTP events (CONNECT, DISCONNECT), SMTP commands (HELO, MAIL FROM, etc.) as well as mail content (headers and body). 
 
-Milter allows you to add or replace custom email headers, filter out specific content for implementing privacy policies. Automatically add BCC recipients for archiving, add disclaimers, etc. All this can be done conditionally for specific senders and/or specific recipients. You can also use Milter to enhance the functionality of Zimbra Distribution lists.
+Milter allows you to add or replace (custom) email headers, filter out specific content for implementing privacy policies. Automatically add BCC recipients for archiving, add disclaimers, etc. All this can be done conditionally for specific senders and/or specific recipients. You can also use Milter to enhance the functionality of Zimbra Distribution lists.
 
 Milter is also used in other Zimbra components such as DKIM and SpamAssasin. This is not a problem as you can have multiple Milters on Zimbra Postfix.
 
