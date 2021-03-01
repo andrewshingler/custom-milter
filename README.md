@@ -15,7 +15,7 @@ Milter can be installed on your Zimbra server or on a dedicated server. Installa
      apt install python3-milter supervisor
      mkdir /etc/milter
 
-This demo script checks if a user from our Zimbra server `example.com` sends an email to `specialcompany.com`, the Milter script will replace the `From` email header with that of the legal department, it will also add the legal department as a BCC recipient. This happens without user interaction.
+This demo script checks if a user from our Zimbra server `example.com` sends an email to `specialcompany.com`, the Milter script will replace the `From` email header with that of the legal department, it will also add the legal department as a BCC recipient. This happens without user interaction. And since Milter is fully on the server side, it will always do it's work. It does not matter if the user uses webmail, a mobile device or a desktop client.
 
 Add the demo Milter script by using `nano` to `/etc/milter/custom-milter.py`. Read the in-code comments to understand how it works:
      
